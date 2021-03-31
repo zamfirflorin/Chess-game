@@ -18,7 +18,7 @@ public class Checkerboard extends JPanel implements ActionListener{
         
         int row;   // Row number, from 0 to 7
         int col;   // Column number, from 0 to 7
-        int x,y;   // Top-left corner of square
+        int x,y;   // Top-left corner of square/tile
         char c;
         for ( row = 0, c = 'A';  row < 8;  ++c, row++ ) {
         
@@ -30,7 +30,7 @@ public class Checkerboard extends JPanel implements ActionListener{
               else
                  g.setColor(new Color(184,139,74));
               g.fillRect(x, y, 50, 50);
-              tiles.add(new Tile(row, col));
+              tiles.add(new Tile(x, y));
               positions.add(new Position(c, col));
            } 
            
@@ -40,7 +40,7 @@ public class Checkerboard extends JPanel implements ActionListener{
         System.out.println(positions);
      }  // end paint()
 
-    public void drawFrame(Graphics g, int frameNumber, int width, int height) {
+ /*   public void drawFrame(Graphics g, int frameNumber, int width, int height) {
 
         int row;   // Row number, from 0 to 7
         int col;   // Column number, from 0 to 7
@@ -52,16 +52,16 @@ public class Checkerboard extends JPanel implements ActionListener{
               x = col * 50;
               y = row * 50;
               if ( (row % 2) == (col % 2) )
-                 g.setColor(Color.WHITE);
+                 g.setColor(Color.MAGENTA);
               else
-                 g.setColor(Color.BLACK);
+                 g.setColor(Color.BLUE);
               g.fillRect(x, y, 100, 100);
 
            } 
 
         }
     }
-    
+    */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

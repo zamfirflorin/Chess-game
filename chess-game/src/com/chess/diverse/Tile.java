@@ -1,10 +1,13 @@
 package com.chess.diverse;
 
+import java.awt.Color;
+
 public class Tile {
 
 	
-	int x;
-	int y;
+	public int col;
+	public int row;
+	public Color color;
 	
 	
 	public Tile(int x, int y) {
