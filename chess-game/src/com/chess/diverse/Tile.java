@@ -5,22 +5,25 @@ import java.awt.Color;
 public class Tile {
 
 	
-	public int col;
 	public int row;
+	public int col;
 	public Color color;
 	
 	
-	public Tile(int x, int y) {
-		this.x = x; 
-		this.y = y;
-
+	public Tile(int row, int col, Color color) {
+		this.row = row; 
+		this.col = col;
+		this.color = color;
 	}
 
 
 	@Override
 	public String toString() {
-		return "Tile [x=" + x + ", y=" + y + "]";
+		return "Tile [row=" + row + ", col=" + col + ", color=" + color + "]";
 	}
+
+
+
 
 
 

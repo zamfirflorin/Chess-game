@@ -14,6 +14,8 @@ public class Checkerboard extends JPanel implements ActionListener{
 	public List<Tile> tiles = new ArrayList<>();
 	public List<Position> positions = new ArrayList<>();
 	
+	public Tile[][] tilesArray = new Tile[8][8];
+	
     public void paint(Graphics g) {
         
         int row;   // Row number, from 0 to 7
@@ -26,11 +28,11 @@ public class Checkerboard extends JPanel implements ActionListener{
               x = col * 50;
               y = row * 50;
               if ( (row % 2) == (col % 2) )
-                 g.setColor(new Color(227,193,111));
+            	  tilesArray[row][col] = new Tile(x, y, new Color(227,193,111));
               else
-                 g.setColor(new Color(184,139,74));
+            	  tilesArray[row][col] = new Tile(x, y, new Color(184,139,74));
               g.fillRect(x, y, 50, 50);
-              tiles.add(new Tile(x, y));
+              //tiles.add(new Tile(x, y));
               positions.add(new Position(c, col));
            } 
            
