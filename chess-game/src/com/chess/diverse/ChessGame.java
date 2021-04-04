@@ -36,6 +36,7 @@ public class ChessGame {
 	  	Move move2 = Move.getMove();
 	  	
 		Piece blackKnight = Piece.getPiece("Knight");
+		Piece blackKing = Piece.getPiece("Knight");
 	      
 	   } // end main
 
