@@ -2,7 +2,7 @@ package com.chess.pieces;
 
 import com.chess.entities.Piece;
 
-public abstract class Knight implements Piece{
+public  class Knight implements Piece{
 
 	
 	public String imgSrc;

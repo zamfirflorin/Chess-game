@@ -8,6 +8,9 @@ import java.awt.event.*;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
+import com.chess.action.Move;
+import com.chess.entities.Piece;
+
 
 public class ChessGame {
 
@@ -26,6 +29,14 @@ public class ChessGame {
 	      window.setVisible(true);
 	      //frameTimer.start(); // commented out so we don't get an animation
 
+	  	Move move = Move.getMove();
+	  	move.isChecked = true;
+	  	System.out.println(move.isChecked());
+	  	
+	  	Move move2 = Move.getMove();
+	  	
+		Piece blackKnight = Piece.getPiece("Knight");
+	      
 	   } // end main
 
 

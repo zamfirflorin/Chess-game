@@ -1,5 +1,6 @@
 package com.chess.diverse;
 
+import com.chess.action.Move;
 import com.chess.entities.Piece;
 
 public class Position {
@@ -17,8 +18,9 @@ public class Position {
 	public String toString() {
 		return "Position [" +c + " " +  x +"]";
 	}
-
 	
+	Move move = Move.getMove();	
+	Piece blackKnight = Piece.getPiece("Knight");
 	
 	
 }
