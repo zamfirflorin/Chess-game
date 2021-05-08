@@ -2,6 +2,7 @@ package com.chess.diverse;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -27,11 +28,14 @@ public class Checkerboard extends JPanel implements ActionListener{
            for ( col = 0;  col < 8;  col++) {
               x = col * 50;
               y = row * 50;
-              if ( (row % 2) == (col % 2) )
-            	  tilesArray[row][col] = new Tile(x, y, new Color(227,193,111));
-              else
-            	  tilesArray[row][col] = new Tile(x, y, new Color(184,139,74));
-              g.fillRect(x, y, 50, 50);
+              if ( (row % 2) == (col % 2) ) {
+            	  tilesArray[row][col] = new Tile(new Color(227,193,111), new Rectangle(row, col, x, y) );
+              }
+              else {
+            	  tilesArray[row][col] = new Tile(new Color(184,139,74), new Rectangle(row, col, x, y) );
+              }
+            	  tilesArray[row][col].fillRect(row, col, x, y);
+              g.fillRect(x, y, row, col);
               //tiles.add(new Tile(x, y));
               positions.add(new Position(c, col));
            } 
