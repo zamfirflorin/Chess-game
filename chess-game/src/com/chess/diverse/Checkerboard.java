@@ -34,7 +34,7 @@ public class Checkerboard extends JPanel implements ActionListener{
               else {
             	  tilesArray[row][col] = new Tile(new Color(184,139,74), new Rectangle(row, col, x, y) );
               }
-            	  tilesArray[row][col].fillRect(row, col, x, y);
+
               g.fillRect(x, y, row, col);
               //tiles.add(new Tile(x, y));
               positions.add(new Position(c, col));
