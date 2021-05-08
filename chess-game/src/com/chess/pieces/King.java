@@ -2,7 +2,7 @@ package com.chess.pieces;
 
 import com.chess.entities.Piece;
 
-public abstract class King implements Piece {
+public  class King implements Piece {
 
 	
 	
